@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 model = tf.keras.models.load_model('mnist.h5')
 
 #Load the image
-img = cv2.imread(r'Image path')[:, :, 0] #get the blue channel from the BGR color space
+img = cv2.imread(r'Image path')[:, :, 0] #convert the image to grayscale
 img = np.invert(np.array([img]))
 prediction = model.predict(img)
 print("The number is probably a {}".format(np.argmax(prediction)))
