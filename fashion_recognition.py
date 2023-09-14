@@ -8,7 +8,7 @@ model = tf.keras.models.load_model('fashion_mnist.h5')
 items = ['Tshirt/top', 'Trouser', 'Pullover', 'Dress', 'Coat', 'Sandal', 'Shirt', 'Sneaker', 'Bag', 'Ankle boot']
 
 # Load the image
-img = cv2.imread(r"C:\Users\monis\OneDrive\Pictures\Saved Pictures\img3.jpeg", 0)  # convert the image to grayscale
+img = cv2.imread(r"Image path", 0)  # read and convert the image to grayscale
 img = cv2.resize(img, (28, 28))  # resize the image to 28x28 pixels
 img = np.invert(np.array([img]))  # invert the image
 prediction = model.predict(img)
