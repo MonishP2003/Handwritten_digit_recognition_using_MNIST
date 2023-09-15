@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 model = tf.keras.models.load_model('fashion_mnist.h5')
 
 # Load and preprocess the image
-image_path = r"C:\Users\Naveen S\Pictures\Saved Pictures\img3.png"
+image_path = r"Image path"
 img = cv2.imread(image_path, cv2.IMREAD_GRAYSCALE)  # Read as grayscale
 img = cv2.resize(img, (28, 28))  # Resize to match model input size
 img = img / 255.0  # Normalize to the range [0, 1]
